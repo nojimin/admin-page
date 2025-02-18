@@ -1,0 +1,27 @@
+/* CSS */
+
+/* 사이드바 기본 스타일 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -30%;
+    width: 30%;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transition: left 0.3s ease;  /* 사이드바가 열릴 때 부드러운 전환 */
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* 사이드바가 열렸을 때 */
+.sidebar.open {
+    left: 0;
+}
+
+/* 사이드바가 열렸을 때 메인 콘텐츠의 위치와 너비 변경 */
+.sidebar.open + .main-content {
+    width: 70%;
+    margin-left: 32%;
+    transition: margin-left 0.3s ease, width 0.3s ease;
+}
